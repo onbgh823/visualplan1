@@ -57,7 +57,7 @@
     color:#555;
     letter-spacing: -0.5px;
     position: relative;
-    padding: 0 15px;
+    padding: 0px 10px 0px 20px;
 }
 .help_box .help .helpus a::before {
     content: '|';
