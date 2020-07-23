@@ -6,7 +6,17 @@
 
 #header {position:fixed; width:100%;background: white; box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); z-index:99; }/*가로축 세로축 그림자 그림자색상*/
 /* 다른박스들과 겹치지 않게하기 코드순서대로 뒤죽박죽으로 할경우 스크롤을 내릴때 뒤집힐수가 있다-박스 겹침 순서 z-index:999*/
-.topmenu { text-align:right; padding: 9px 0; font-size: 11px; font-family: '나눔고딕'; color: rgba(0, 0, 0, 0.6); } /*글씨오른쪽/ 좌우패딩 11px이 적용이 안되는 이유는 부모박스에 주지말고 a에 각각 줘야/ 꼴골 색깔 사이즈는 a한테 줘도 되지만 칼라인헤릿때문에 상속이 가능하다*/
+.topmenu { text-align:right; padding: 9px 0; font-size: 11px; font-family: '나눔고딕'; color: rgba(0, 0, 0, 0.6); position: relative;} /*글씨오른쪽/ 좌우패딩 11px이 적용이 안되는 이유는 부모박스에 주지말고 a에 각각 줘야/ 꼴골 색깔 사이즈는 a한테 줘도 되지만 칼라인헤릿때문에 상속이 가능하다*/
+.topmenu .search_box {
+    position: absolute; 
+    top: 3px; left: 0;
+}
+.topmenu .search_box fieldset {
+    border: 1px solid #ccc;
+    padding-right: 5px;
+    border-radius: 2px; 
+}
+.topmenu .search_box input {border: none; padding: 4px 0.5em;}
 .topmenu a {padding:0 11px; /*border-left:1px solid #d2d3d5;*/position: relative;} /*a태그 인라인속성 상하여백이 줘도 반응무 그래서 상위클래스 톱메뉴에 패딩 상하여백을 줌*/
 .topmenu a:hover {color: rgba(0, 0, 0, 0.8);}
 /* .topmenu a:first-child {border:none;}  */
