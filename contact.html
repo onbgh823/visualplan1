@@ -11,9 +11,9 @@
     
     <div id="header">
         <div class="topmenu row"><!--a는 붙어 입력-->
-            <a href="#">Home</a>
-            <a href="#">Contact</a>
-            <a href="#">login</a>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
         </div> 
         <div class="h1NavWrap">
             <div class="h1Nav row"><!--cf 속성 플롯-->
@@ -64,6 +64,61 @@
 
     <div id="contact_section">
         <div class="contact_box row">
+            <h2>문의하기</h2>
+            <form action="#" method="post" class="contact_form">
+            <fieldset>
+                <legend>문의하기 양식</legend>
+                <div class="contact_list">
+                    <label for="class" id="class_list">문의구분</label>
+                    <select id="class_choice" class="w160">
+                        <option value="tamp">템플릿 구매</option>
+                        <option value="order">주문제작</option>
+                        <option value="maintain">유지보수</option>
+                        <option value="program">프로그램 제작</option>
+                        <option value="mobile">모바일 웹 제작</option>
+                        <option value="marketing">마케팅</option>
+                        <option value="etc">기타</option>
+                    </select>
+
+                    <label for="admin_lbl">담당자명</label>
+                    <div class="list_admin">
+                        <input type="text" id="admin">
+                    </div>
+
+                    <label for="name_lbl">회사명(부서명)</label>
+                    <div class="list_name">
+                        <input type="text" id="name">
+                    </div>
+
+                    <label for="phone_lbl">연락처</label>
+                    <div class="list_phone">
+                        <input type="text" id="phone">
+                    </div>
+
+                    <label for="email_lbl">이메일</label>
+                    <div class="list_email">
+                        <input type="text" id="email">
+                    </div>
+
+                    <label for="content lbl">문의내용</label>
+                    <div class="list_content">
+                        <textarea name="query" id="query"></textarea>
+                    </div>
+
+                    <label for="upload_lbl">파일첨부</label>
+                    <div class="uplaod">
+                        <input type="file" id="attac">
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <input type="submit" value="문의하기">
+                    <input type="reset" value="작성취소">
+                </div>
+            </fieldset>    
+            </form>
+            
+            
 
         </div>
     </div>

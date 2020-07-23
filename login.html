@@ -6,14 +6,15 @@
     <title>비쥬얼플랜</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 </head>
 <body>
     
     <div id="header">
         <div class="topmenu row"><!--a는 붙어 입력-->
-            <a href="#">Home</a>
-            <a href="#">Contact</a>
-            <a href="#">login</a>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
         </div> 
         <div class="h1NavWrap">
             <div class="h1Nav row"><!--cf 속성 플롯-->
@@ -64,7 +65,28 @@
 
     <div id="login_section">
         <div class="login_box row">
-
+            <h2>로그인</h2>
+            <form action="#" method="post" class="login_form">
+                <fieldset>
+                    <legend>로그인</legend>
+                        <div class="login_content">
+                            <div class="idpw_box">
+                            <input required type="text" id="id_lbl" placeholder="아이디 입력"><br>
+                            <input required type="password" id="pw_lbl" placeholder="비밀번호 입력">
+                        </div>
+                        <button type="submit"><i class="fas fa-check"> 로그인</i></button>
+                        </div>
+                        <div class="help_box">
+                            <div class="help row ">
+                                <div class="helpus">
+                                    <a href="#">회원가입</a>
+                                    <a href="#">아이디 찾기</a>
+                                    <a href="#">비밀번호 찾기</a>
+                                </div>
+                            </div>    
+                        </div>        
+                 </fieldset>
+            </form>
         </div>
     </div>
 
