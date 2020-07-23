@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+
+
+
+
+#header {position:fixed; width:100%;background: white; box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); z-index:99; }/*가로축 세로축 그림자 그림자색상*/
+/* 다른박스들과 겹치지 않게하기 코드순서대로 뒤죽박죽으로 할경우 스크롤을 내릴때 뒤집힐수가 있다-박스 겹침 순서 z-index:999*/
+.topmenu { text-align:right; padding: 9px 0; font-size: 11px; font-family: '나눔고딕'; color: rgba(0, 0, 0, 0.6); } /*글씨오른쪽/ 좌우패딩 11px이 적용이 안되는 이유는 부모박스에 주지말고 a에 각각 줘야/ 꼴골 색깔 사이즈는 a한테 줘도 되지만 칼라인헤릿때문에 상속이 가능하다*/
+.topmenu a {padding:0 11px; /*border-left:1px solid #d2d3d5;*/position: relative;} /*a태그 인라인속성 상하여백이 줘도 반응무 그래서 상위클래스 톱메뉴에 패딩 상하여백을 줌*/
+.topmenu a:hover {color: rgba(0, 0, 0, 0.8);}
+/* .topmenu a:first-child {border:none;}  */
+.topmenu a:before {content:''; width:1px; height:7px; background: #d2d3d5; position:absolute; left:0; top:50%; transform: translateY(-50%); }
+/* 첫번째 아들 보더가 안보이게 된다 */
+.topmenu a:first-child:before {display:none}
+
+
+.h1NavWrap { 
+    border-top:1px solid #dedede}
+/* 보유클래스가 없을경우 상위클래스와 .row를 사용해서 포지션 렐러-킨더가든에서 사용한 예 */
+.h1Nav {position:relative;height:103px;}    
+.h1Nav h1 {/* float:left*/font-size:30px; color:#000; line-height:1;padding-top:25px; }/*마진바깥쪽위에 부작용발생 패딩 안쪽위*/
+.h1Nav h1 span {font-size: 14px; display:block;letter-spacing:3.6px}    
+.h1Nav {position: relative; height: 103px;}
+.h1Nav .nav { /*float:right*/ position:absolute; top:0; right:0;}
+.h1Nav .nav .depth1 > li {display: inline-block;position: relative;}/*뎁스2의 부모*/
+
+.h1Nav .nav .depth1 > li > a {display:block; padding:0 50px; font-size:17px ;color:#666; font-family: '나눔고딕'; margin-top:38px;font-weight: bold;/*border-left:1px solid #d2d3d5;*/ position: relative;}/*마진사용할때 주변에 다른요소가 없으면 독자적으로 사용가능 그렇지 않으면 포지션렐러 사용해야*/
+/* 인라인블록li에 떄문에 1칸 더 추가 그래서 패딩값 좀 로우60->40 */
+/* .h1Nav .nav .depth1 > li:first-child > a {border:none} */
+/*주의 a끼리 관계가 형제가 아니라 사촌 아버지가 li인 사촌 퍼스트-챠일드는 형제관계에서만 사용가능 그래서 위 코드대로 */
+.h1Nav .nav .depth1 > li > a:before {content:'';width: 1px; height: 15px; background: #d2d3d5; position: absolute; left:0; top:50%;transform: translateY(-50%); }
+/*위 동일태그와 성격이 같아짐  부모에게 렐러 해야 이태그의 부모는 자기자신에게*/
+.h1Nav .nav .depth1 > li:first-child > a:before {display: none;transition: all 0.5s;} 
+
+.nav .depth2 {position: absolute; top:100%; left:0; width: 100%;/*기본공식 뎁스1렐러*/
+              background: #fff; padding:15px 25px; display: none; transition: all 0.5s;} /*상 우 하 좌 -- 상하 우좌*/
+.nav .depth1 > li:hover .depth2 {display: block; }              
+.nav .depth2 > li {line-height: 31px; font-size: 13px;text-align: center;color:rgba(0, 0, 0, 0.6); border-top:1px solid rgba(0, 0, 0, 0.15)}
+.nav .depth2 > li:hover {color:rgba(0, 0, 0, 0.25);text-indent:1em; transition:all 0.5s;}
+.nav .depth2 > li:first-child {border-top:none}
+/*display none display block은 트랜지션이 먹히지않는다 문자값에는 먹히지않아 칼라는 숫자값이라 트렌지션에 적용이 된다*/
+/* 내비게이션에서는 opacity쓰는게 아니다 트랜지션은 먹히지만/ 자바로 풀어야 */
+
+
+
+
+
+#footer { background:#111; color:#666; font-family: '나눔고딕'; padding-bottom: 60px;}
+#footer .inner {position: relative;}
+
+.inner .footerMenu {padding:50px 0px 0px; text-align: center;}
+.inner .footerMenu a {font-size: 15px;  padding:0px 45px 1px;font-weight: bold;position: relative;}
+
+.inner .footerMenu a:before {content: '|';  position: absolute; top:50%; left:0%; transform: translateY(-50%);font-weight: normal;} 
+.inner .footerMenu a:nth-child(1):before {display: none;}
+
+#footer .companyInfo { padding:35px 0px 0px; font-size: 13px; line-height: 2;} 
+
+#footer .companyInfo .address span { padding:0 8px; position: relative;}
+#footer .companyInfo .address span:before {content: '|';  position: absolute; top:50%; left:0; transform: translateY(-50% );font-weight: normal;}
+#footer .companyInfo .address span:nth-child(1):before {display: none;}
+
+#footer .companyInfo .bizinfo span { padding:0 8px; position: relative;}
+#footer .companyInfo .bizinfo span:before {content: '|';  position: absolute; top:50%; left:0; transform: translateY(-50%);font-weight: normal;}
+#footer .companyInfo .bizinfo span:nth-child(1):before {display:none}
+
+
+#footer .sns {position: absolute; bottom: 0; right:0;}
+.sns .copyright {font-size: 11px;line-height: 3;}
+.sns .snslink {text-align: center;letter-spacing: 3px;}
+
+
+/*선생님파트*/
+/* #footer { background:#111; color:#666; padding:50px 0px 60px;}
+#footer .inner {position: relative;}
+#footer .footerMenu {font-size: 15px; text-align: center;}
+#footer .footerMenu a {padding:0 45px ;font-weight: bold;position: relative;}
+#footer .footerMenu a:before {content: '|';  position: absolute; top:50%; left:0; font-size: 10px; transform: translateY(-50%);font-weight:normal; } 
+#footer .footerMenu a:first-child:before {display: none;} */
+
+/*마진은 음수값 사용가능 패딩은 양수값만 존재*/
+/* #footer .companyInfo { padding-top:35px; font-size: 13px;}
+#footer .sns {position: absolute; bottom: 0; right:0;}
+#footer .companyInfo span {position: relative; padding: 0 8px 0 15px;}
+
+#footer .companyInfo span:before {content: '|';  position: absolute; top:0; left:0;}
+#footer .companyInfo span:first-child:before, 
+#footer .companyInfo span.detailaddr::before {display: none; padding:0;}
+
+ 
+#footer .companyInfo span.detailaddr {margin-left:-15px}
+
+#footer .sns {font-size: 11px; text-align: center;}
+#footer .sns .copyright {padding-bottom: 10px;} */
+
+
+
+
+
+
+
+
+
+/* .goTop {position: relative;}
+.goTop a { font-size:30px; position: absolute; bottom:0;} */
+
+.goTop { font-size:60px; position: fixed; bottom: 30px; right:40px; color:#666; z-index: 99999;opacity: 0.5;}
+
+
+.loadBox { display:none; background: #fff; position: fixed; left:0; bottom: 0; top:0; right: 0; z-index: 999999999;} 
+.loadBox i {font-size: 80px; position: absolute; top:40%; left: 50%; transform:translate(-50%, -50%)}
