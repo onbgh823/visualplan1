@@ -63,9 +63,6 @@
     height: 23px;
     padding-bottom: 15px;
 }
-#contact_section .contact_box .contact_list input[id=upload_lbl] {
-    background: #7a95d3; margin: 0 auto;
-}
 #contact_section .contact_box .btn {
     padding: 75px 0;
     text-align: center;
