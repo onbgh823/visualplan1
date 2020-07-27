@@ -2,6 +2,7 @@
 @import "reset.css";
 @import "common.css";
 /* 리셋을 먼저써야 */
+@import "rwdcommon.css";
 
 #contact_section {
     padding:250px 0;

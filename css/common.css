@@ -1,9 +1,6 @@
 @charset "utf-8";
 
-
-
-
-
+.row { max-width:1142px; margin:0 auto}
 #header {position:fixed; width:100%;background: white; box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); z-index:99; }/*가로축 세로축 그림자 그림자색상*/
 /* 다른박스들과 겹치지 않게하기 코드순서대로 뒤죽박죽으로 할경우 스크롤을 내릴때 뒤집힐수가 있다-박스 겹침 순서 z-index:999*/
 .topmenu { text-align:right; padding: 9px 0; font-size: 11px; font-family: '나눔고딕'; color: rgba(0, 0, 0, 0.6); position: relative;} /*글씨오른쪽/ 좌우패딩 11px이 적용이 안되는 이유는 부모박스에 주지말고 a에 각각 줘야/ 꼴골 색깔 사이즈는 a한테 줘도 되지만 칼라인헤릿때문에 상속이 가능하다*/
@@ -22,7 +19,9 @@
 /* .topmenu a:first-child {border:none;}  */
 .topmenu a:before {content:''; width:1px; height:7px; background: #d2d3d5; position:absolute; left:0; top:50%; transform: translateY(-50%); }
 /* 첫번째 아들 보더가 안보이게 된다 */
-.topmenu a:first-child:before {display:none}
+.topmenu a:first-of-type:before {display:none}
+/* .topmenu a:first-child:before {display:none} */
+/* 이름이 다른 형제가 존해면 -child 대신에 --of-type 선택자로 써야함 (서치박스때문에.....*/
 
 
 .h1NavWrap { 
@@ -31,6 +30,8 @@
 .h1Nav {position:relative;height:103px;}    
 .h1Nav h1 {/* float:left*/font-size:30px; color:#000; line-height:1;padding-top:25px; }/*마진바깥쪽위에 부작용발생 패딩 안쪽위*/
 .h1Nav h1 span {font-size: 14px; display:block;letter-spacing:3.6px}    
+.h1Nav .open_nav {display: none;}
+.h1Nav .close_nav {display: none;}
 .h1Nav {position: relative; height: 103px;}
 .h1Nav .nav { /*float:right*/ position:absolute; top:0; right:0;}
 .h1Nav .nav .depth1 > li {display: inline-block;position: relative;}/*뎁스2의 부모*/

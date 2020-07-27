@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+
+@media only screen and (max-width:1142px) {
+    .row {width:100%; margin:0 auto; padding-right: 10px; padding-left: 10px;} 
+    .topmenu .search_box {position: absolute; top: 3px; left: 10px;}
+}
+
+@media only screen and (max-width:1070px) {    
+    .h1NavWrap { 
+        border-top:1px solid #dedede}
+    
+    .h1Nav {position:relative;height:auto;}    
+    .h1Nav h1 {/* float:left*/font-size:30px; color:#000; line-height:1;padding-top:25px;
+                text-align: center; }
+    .h1Nav h1 span {font-size: 14px; display:block;letter-spacing:3.6px}
+    .h1Nav .nav { /*float:right*/ position:static; top:0; right:0; text-align: center;}
+    /* .h1Nav .open_nav {display: none;} */
+    .h1Nav .nav .depth1 > li {display: inline-block;position: relative;}/*뎁스2의 부모*/
+    
+    .h1Nav .nav .depth1 > li > a {display:block; padding:30px 50px 30px; font-size:17px ;color:#666; font-family: '나눔고딕'; margin-top:0px;font-weight: bold;/*border-left:1px solid #d2d3d5;*/ position: relative;}
+    .h1Nav .nav .depth1 > li > a:before {content:'';width: 1px; height: 15px; background: #d2d3d5; position: absolute; left:0; top:50%;transform: translateY(-50%); }
+    
+    .h1Nav .nav .depth1 > li:first-child > a:before {display: none;transition: all 0.5s;} 
+    
+    .nav .depth2 {position: absolute; top:100%; left:0; width: 100%;/*기본공식 뎁스1렐러*/
+                  background: #fff; padding:15px 25px; display: none; transition: all 0.5s;} /*상 우 하 좌 -- 상하 우좌*/
+    .nav .depth1 > li:hover .depth2 {display: block; }              
+    .nav .depth2 > li {line-height: 31px; font-size: 13px;text-align: center;color:rgba(0, 0, 0, 0.6); border-top:1px solid rgba(0, 0, 0, 0.15)}
+    .nav .depth2 > li:hover {color:rgba(0, 0, 0, 0.25);text-indent:1em; transition:all 0.5s;}
+    .nav .depth2 > li:first-child {border-top:none}
+}
+
+
+@media only screen and (max-width:875px) {
+
+    /* .h1Nav {height: 149px;} */
+    .h1Nav h1 {
+        font-size:30px; color:#000;
+        padding-top:30px; 
+        padding-bottom: 30px;
+        text-align: center; 
+    }
+    .h1Nav .nav {display:none;
+        position:static;
+        top:0; right:0; 
+        text-align: center;
+    }
+    .h1Nav .open_nav {
+        position: absolute; 
+        top: 50%; right:10px; 
+        transform: translateY(-50%); 
+        display: none;
+         font-size: 30px;}
+    .h1Nav .close_nav {
+        position: absolute; 
+        top: 50%; right:10px; 
+        transform: translateY(-50%); 
+        display: block;
+         font-size: 30px;}
+    }
+}
