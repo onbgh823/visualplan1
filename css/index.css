@@ -60,7 +60,7 @@
 
 
 
-.business {height: 320px; background-image: url(../images/bgs-n1.jpg);background-size:cover;background-attachment: fixed; background-position: center;;position: relative;text-align: center;font-weight: bold;}
+.business {height: 320px; background-image: url(../images/bgs-n1.jpg);background-size:cover;background-attachment: fixed; background-position: center;position: relative;text-align: center;font-weight: bold;}
 .business:before {content:''; position: absolute; top:0; left:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.3)}
 .business .text {font-family: '나눔고딕'; display: inline-block;}
 .business > .row {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);}
