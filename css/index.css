@@ -77,10 +77,17 @@
 .cscenter .cs {width: 23.1173%;}
 /*row의 넓이 1142px 기준*/
 .cscenter .board .tabTit li {display: inline-block;}/*빈틈없이 한줄정렬 이러면 ul에 cf안해도됨 */
-.cscenter .board .tabTit li a {display :inline-block; font-size:14px; color:#999; padding: 10px 15px; } 
-.cscenter .board .tabTit li a.on {color:#666; border: 1px solid #d9d9d9; border-bottom: none;}
+.cscenter .board .tabTit li a {display :inline-block; font-size:14px; color:#999; padding: 10px 15px;
+    border: 1px solid #fff;
+     /*보더때문에 스크롤이 움직여 배경색과 같은 색으로 맞춰주면 스크롤이 움직이지 않는다  */
+} 
+/* .cscenter .board .tabTit li a.on {color:#666; border: 1px solid #d9d9d9; border-bottom: none;} */
+.cscenter .board .tabTit li.on a {color:#666; border: 1px solid #d9d9d9; border-bottom: none;}
 .cscenter .board .tabTit {border-bottom: 1px solid #d9d9d9; padding:0 8px;}
-.cscenter .board .tabCont {font-size: 13px; color:#666; margin-top:18px; height:167px; overflow:hidden;} 
+.cscenter .board .tabCont {font-size: 13px; color:#666; margin-top:18px; height:167px;
+    /* overflow: visible; */
+    overflow:hidden;
+} 
 
 
 .cscenter .board .tabCont td {padding:7px 5px; }

@@ -45,8 +45,10 @@
 .h1Nav .nav .depth1 > li:first-child > a:before {display: none;transition: all 0.5s;} 
 
 .nav .depth2 {position: absolute; top:100%; left:0; width: 100%;/*기본공식 뎁스1렐러*/
-              background: #fff; padding:15px 25px; display: none; transition: all 0.5s;} /*상 우 하 좌 -- 상하 우좌*/
-.nav .depth1 > li:hover .depth2 {display: block; }              
+              background: #fff; padding:15px 25px; display: none;
+              /* transition: all 0.5s; header.js*/
+            } /*상 우 하 좌 -- 상하 우좌*/
+/* .nav .depth1 > li:hover .depth2 {display: block; }               */
 .nav .depth2 > li {line-height: 31px; font-size: 13px;text-align: center;color:rgba(0, 0, 0, 0.6); border-top:1px solid rgba(0, 0, 0, 0.15)}
 .nav .depth2 > li:hover {color:rgba(0, 0, 0, 0.25);text-indent:1em; transition:all 0.5s;}
 .nav .depth2 > li:first-child {border-top:none}
